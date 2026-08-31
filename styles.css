@@ -1548,3 +1548,251 @@ h3 {
     padding-bottom: 52px;
   }
 }
+.story-section {
+  background: var(--paper);
+}
+
+.story-head {
+  max-width: 980px;
+}
+
+.story-head h2 {
+  max-width: 940px;
+}
+
+.story-quote {
+  max-width: 920px;
+  padding: 34px 38px;
+  color: var(--forest);
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.6;
+  background: var(--white);
+  border-left: 6px solid var(--terracotta);
+  border-radius: 8px;
+  box-shadow: var(--shadow-soft);
+}
+
+.issue-grid,
+.reason-cards,
+.data-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.issue-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 24px;
+}
+
+.issue-grid p {
+  margin: 0;
+  padding: 16px 18px;
+  color: var(--forest);
+  font-weight: 800;
+  background: rgba(255, 253, 249, 0.72);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.evidence-section {
+  width: 100%;
+  max-width: none;
+  padding-right: max(20px, calc((100% - 1120px) / 2));
+  padding-left: max(20px, calc((100% - 1120px) / 2));
+  color: var(--white);
+  background: var(--forest);
+}
+
+.evidence-section .section-head,
+.evidence-section .source-note,
+.data-grid {
+  max-width: 1120px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.evidence-section .eyebrow {
+  color: #f0bea9;
+}
+
+.evidence-section h2,
+.evidence-section .section-head p {
+  color: var(--white);
+}
+
+.data-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.data-grid article,
+.reason-cards article {
+  padding: 30px 28px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow-soft);
+}
+
+.data-grid article {
+  color: var(--ink);
+  background: rgba(255, 253, 249, 0.94);
+}
+
+.data-grid strong {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--terracotta-dark);
+  font-family: var(--latin);
+  font-size: 38px;
+  line-height: 1;
+}
+
+.data-grid span,
+.reason-cards p {
+  color: var(--ink-soft);
+}
+
+.source-note {
+  display: block;
+  margin-top: 18px;
+  color: rgba(255, 253, 249, 0.66);
+  font-size: 11px;
+}
+
+.reason-cards {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.reason-cards span {
+  display: inline-flex;
+  margin-bottom: 18px;
+  color: var(--terracotta-dark);
+  font-family: var(--latin);
+  font-weight: 800;
+}
+
+.reason-cards h3 {
+  font-size: 22px;
+}
+
+.diagram-section {
+  width: 100%;
+  max-width: none;
+  padding-right: max(20px, calc((100% - 1120px) / 2));
+  padding-left: max(20px, calc((100% - 1120px) / 2));
+  background: var(--paper-deep);
+}
+
+.route-diagram {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px minmax(0, 1fr);
+  gap: 20px;
+  align-items: stretch;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.route-column,
+.route-core {
+  border-radius: 8px;
+}
+
+.route-column {
+  padding: 28px;
+  background: var(--white);
+  border: 1px solid var(--line);
+}
+
+.route-column h3 {
+  margin-bottom: 20px;
+}
+
+.route-column ol {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.route-column li {
+  position: relative;
+  padding: 13px 14px 13px 28px;
+  color: var(--ink-soft);
+  background: var(--paper);
+  border-radius: 8px;
+}
+
+.route-column li::before {
+  position: absolute;
+  top: 21px;
+  left: 13px;
+  width: 7px;
+  height: 7px;
+  content: "";
+  background: var(--terracotta);
+  border-radius: 999px;
+}
+
+.route-core {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 10px;
+  padding: 28px 18px;
+  color: var(--white);
+  text-align: center;
+  background: var(--forest);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: var(--shadow-strong);
+}
+
+.route-core span {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 52px;
+  color: var(--forest);
+  font-family: var(--latin);
+  font-weight: 800;
+  background: #f0bea9;
+  border-radius: 8px;
+}
+
+.route-core strong {
+  font-size: 22px;
+}
+
+.route-core small {
+  color: rgba(255, 253, 249, 0.72);
+  line-height: 1.7;
+}
+
+.local-final p {
+  max-width: 760px;
+}
+
+@media (max-width: 900px) {
+  .issue-grid,
+  .reason-cards,
+  .data-grid,
+  .route-diagram {
+    grid-template-columns: 1fr;
+  }
+
+  .route-core {
+    min-height: 180px;
+  }
+}
+
+@media (max-width: 520px) {
+  .story-quote {
+    padding: 26px 22px;
+    font-size: 21px;
+  }
+
+  .data-grid strong {
+    font-size: 32px;
+  }
+}
