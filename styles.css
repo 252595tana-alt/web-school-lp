@@ -1489,3 +1489,62 @@ h3 {
     transition-duration: 0.01ms !important;
   }
 }
+.compact-section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.overview .split {
+  align-items: center;
+}
+
+.overview-illustration {
+  margin: 0;
+}
+
+.compact-note {
+  max-width: 520px;
+  color: var(--ink-soft);
+}
+
+.compact-points {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.compact-points p {
+  margin: 0;
+  padding: 18px 20px;
+  color: var(--forest);
+  font-weight: 800;
+  background: rgba(255, 253, 249, 0.72);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.compact-section .section-head {
+  margin-bottom: 28px;
+}
+
+.compact-section .day-card {
+  min-height: 300px;
+}
+
+@media (max-width: 900px) {
+  .compact-points {
+    grid-template-columns: 1fr;
+  }
+
+  .overview-illustration {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .compact-section {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+}
